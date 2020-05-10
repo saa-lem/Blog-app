@@ -37,7 +37,7 @@ def create_app(config_name):
     app.config.from_object(DevConfig)
     app.config['SECRET_KEY'] = '2002'
     
-    #registering the main app Bluprints
+    #registering the main app Blueprints
     from .main import main as main_bluprint
     app.register_blueprint(main_bluprint)
     
