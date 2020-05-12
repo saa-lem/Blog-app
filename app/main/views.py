@@ -1,5 +1,5 @@
 from flask import render_template, request, redirect, url_for, flash, abort,current_app
-from PIL import Image
+#from PIL import Image
 from . import main
 from ..request import get_quote
 from flask_login import current_user, login_required
@@ -19,7 +19,7 @@ def index():
     
     '''
     
-    title = "Home | Blog post pages"
+    title = "Home | Blog App pages"
     quote = get_quote()
     
     return render_template("index.html", title = title, quote=quote)
@@ -27,7 +27,7 @@ def index():
 def home():
     page = request.args.get('page', 1, type=int)
     posts = Post.query.order_by(Post.date_posted.desc()).paginate(page=page, per_page=5)
-    return render_template('home.html', posts=posts, title="Posts | Welcome to BlogPosts")
+    return render_template('home.html', posts=posts, title="Posts | Welcome to BlogApp|Salem")
     
 
 
@@ -44,7 +44,7 @@ def new_post():
         flash('You post has been created!', 'success')
         return redirect(url_for('main.index'))
     
-    return render_template('create_post.html', title='New Post | Welcome to BlogPost', form=form)
+    return render_template('create_post.html', title='New Post | Welcome to BlogApp|Salem', form=form)
 
 @main.route("/post/<int:post_id>")
 def post(post_id):
@@ -71,7 +71,7 @@ def update_post(post_id):
         form.title.data = post.title
         form.content.data = post.content
         
-    return render_template('create_post.html', title='Update Post | Welcome to BlogPost', form=form, legend='Update Post')
+    return render_template('create_post.html', title='Update Post | Welcome to BlogApp|Salem', form=form, legend='Update Post')
 
 @main.route("/post/<int:post_id>/delete", methods=['GET','POST'])
 @login_required
@@ -119,7 +119,7 @@ def account():
         
     image_file = url_for('static', filename='photos' + current_user.image_file)
     
-    return render_template('account.html', title='Account | Welcome to BlogPost', image_file=image_file, form=form)
+    return render_template('account.html', title='Account | Welcome to BlogApp|Salem', image_file=image_file, form=form)
 
 @main.route('/user/<string:username>')
 def user_posts(username):

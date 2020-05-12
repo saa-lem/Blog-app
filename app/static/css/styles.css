@@ -1,0 +1,120 @@
+body {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.61), rgba(0, 0, 0, 0.61)), url('../photos/salem.jpg');
+  background-size: cover;
+  color: white;
+  background-position: fixed;
+}
+
+.head {
+  font-family: 'Saira Condensed', sans-serif;
+  padding-top: 70px;
+  font-size: 100px;
+}
+
+.quo {
+  font-size: 40px;
+}
+
+.quote {
+  padding-bottom: 70px;
+  padding-top: 50px;
+}
+
+.intro {
+  font-size: 25px;
+  font-family: 'Nanum Gothic Coding', monospace;
+}
+
+.ote {
+  font-size: 20px;
+  font-family: 'Arapey', serif;
+  font-style: italic;
+}
+
+.author {
+  font-size: 15px;
+}
+
+.kik {
+  padding-bottom: 50px;
+}
+
+.img1,
+.img2,
+.img3 {
+  height: 200px;
+  width: 200px;
+}
+
+.account,
+.post,
+.posty,
+.user {
+  margin-left: 30px;
+  margin-right: 20px;
+  margin-bottom: 15px;
+}
+
+.content-section {
+  background: #D0D3D4;
+  padding: 10px 20px;
+  border-radius: 3px;
+  margin-bottom: 20px;
+}
+
+.article-title {
+  color: #444444;
+}
+
+a.article-title:hover {
+  color: #428bca;
+  text-decoration: none;
+}
+
+.article-content {
+  white-space: pre-line;
+  color: black;
+}
+
+.article-metadata {
+  padding-bottom: 1px;
+  margin-bottom: 4px;
+  border-bottom: 1px solid #e3e3e3
+}
+
+.article-metadata a:hover {
+  color: #333;
+  text-decoration: none;
+}
+
+.article-svg {
+  width: 25px;
+  height: 25px;
+  vertical-align: middle;
+}
+
+.home {
+  padding-right: 60px;
+  padding-left: 60px;
+}
+
+.butto {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.del {
+  color: black
+}
+
+.juu {
+  padding-bottom: 10px;
+}
+
+.fade {
+  color: black;
+}
+
+.account {
+  color: black;
+}

@@ -1,5 +1,5 @@
 from flask import render_template, redirect, url_for, flash, request, Blueprint
-from ..models import User, Post
+from ..models import User
 from . import auth
 from flask_login import login_user, login_required, logout_user, current_user
 from ..import db
@@ -23,7 +23,7 @@ def login():
         
         flash('Invalid username or password')
         
-    title = "Login | Welcome to BlogPost"
+    title = "Login | Welcome to BlogApp|Salem"
     return render_template('auth/login.html', login_form = login_form, title = title)
 
 @auth.route("/logout")
@@ -47,6 +47,6 @@ def register():
         
         return redirect(url_for('auth.login'))
     
-    title = "New Account | Welcome to BlogPost"
+    title = "New Account | Welcome to BlogApp|Salem"
     
     return render_template('auth/register.html', registration_form = form, title = title)

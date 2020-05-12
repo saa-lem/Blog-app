@@ -7,7 +7,7 @@ class Config:
     '''
 
     SECRET__KEY = os.environ.get('SECRET__KEY ')
-    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://salem:salo24@localhost/blug'
+    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://salem:salem18@localhost/blug'
     SQLALCHEMY_TRACK_MODIFICATIONS = True
     UPLOADED_PHOTOS_DEST = 'app/static/photos'
     
@@ -44,7 +44,7 @@ class DevConfig(Config):
         
     '''
     
-    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://salem:salo24@localhost/blug'
+    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://salem:salem18@localhost/blug'
     
     DEBUG = True
     
@@ -58,7 +58,7 @@ class TestConfig(Config):
         Config: The parent configuration class with general configuration settings
     '''
     
-    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://salem:salo24@localhost/blug'
+    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://salem:salem18@localhost/blug'
     
     
     
